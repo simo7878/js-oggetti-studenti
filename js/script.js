@@ -50,9 +50,14 @@ var studenti = [
     'eta' : 30
   }
 ];
-
+//ciclo su tutti gli oggetti studenti
 for (var i = 0; i < studenti.length; i++) {
   studenti[i]
   console.log(studenti[i]);
   }
+//stampo di ogniuno nome e cognome
+for (var i = 0; i < studenti.length; i++) {
+  console.log(studenti[i].nome + ' ' + studenti[i].cognome);
+}
+
 });
