@@ -13,10 +13,11 @@ $(document).ready(function () {
 
   // creo un oggetto studente e stampo le proprietà
   var studenteSingolo = {
-    'nome' : 'simona',
-    'cognome' : 'palumbo',
-    'eta' : 42
+    'nome' : 'Lorenzo',
+    'cognome' : 'famiglietti',
+    'eta' : 30
   }
+  console.log(studenteSingolo);
   //for (var k in studenteSingolo) {
     //console.log(studenteSingolo[k]);
   //}
@@ -60,4 +61,11 @@ for (var i = 0; i < studenti.length; i++) {
   console.log(studenti[i].nome + ' ' + studenti[i].cognome);
 }
 
+//aggiunta nuovo oggetto studente con richiesta 3 prompt
+var nuovoStudente = {
+  'nome' : prompt('inserisci il tuo nome'),
+  'cognome' : prompt('inserisci il tuo cognome'),
+  'eta' : prompt('indica la tua eta')
+}
+console.log(nuovoStudente);
 });
