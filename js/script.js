@@ -18,10 +18,12 @@ $(document).ready(function () {
     'eta' : 30
   }
   console.log(studenteSingolo);
-  //for (var k in studenteSingolo) {
-    //console.log(studenteSingolo[k]);
-  //}
-//});
+
+  for (var k in studenteSingolo) {
+    console.log(studenteSingolo[k]);
+    $('#studente_singolo').append(studenteSingolo[k] + ' ' + '<br>');
+  }
+});
 
 // creo array di oggetti studente, ciclo su tutti gli studenti, stampo di
 //ogniuno nome e cognome
@@ -51,15 +53,25 @@ var studenti = [
     'eta' : 30
   }
 ];
-//ciclo su tutti gli oggetti studenti
-for (var i = 0; i < studenti.length; i++) {
-  studenti[i]
-  console.log(studenti[i]);
+
+function visualizzaTuttiGliStudenti (elencoStudenti) {
+  for (var i = 0; i < elencoStudenti.length; i++) {
+      var studenteCorrente = elencoStudenti[i];
+      inserisciNuovoStudente(studenteCorrente)
+      console.log(elencoStudenti[i].nome + ' ' + elencoStudenti[i].cognome);
   }
-//stampo di ogniuno nome e cognome
-for (var i = 0; i < studenti.length; i++) {
-  console.log(studenti[i].nome + ' ' + studenti[i].cognome);
+
+
 }
+//ciclo su tutti gli oggetti studenti stampo di ogniuno nome e cognome
+for (var i = 0; i < studenti.length; i++) {
+    var studenteCorrente = studenti[i];
+    inserisciNuovoStudente(studenteCorrente)
+    console.log(studenti[i].nome + ' ' + studenti[i].cognome);
+
+
+}
+
 
 //aggiunta nuovo oggetto studente con richiesta 3 prompt
 var nuovoStudente = {
@@ -67,7 +79,13 @@ var nuovoStudente = {
   'cognome' : prompt('inserisci il tuo cognome'),
   'eta' : prompt('indica la tua eta')
 }
+inserisciNuovoStudente(nuovoStudente)
 console.log(nuovoStudente);
+
 studenti.push(nuovoStudente);
 console.log(studenti);
-});
+
+function inserisciNuovoStudente(studenteDaInserire) {
+  $('#studenti .lista_nomi').append('<li>' + studenteDaInserire.nome + ' ' + studenteDaInserire.cognome + '</li>');
+
+}
