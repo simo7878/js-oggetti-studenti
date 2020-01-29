@@ -68,4 +68,6 @@ var nuovoStudente = {
   'eta' : prompt('indica la tua eta')
 }
 console.log(nuovoStudente);
+studenti.push(nuovoStudente);
+console.log(studenti);
 });
