@@ -12,12 +12,47 @@
 $(document).ready(function () {
 
   // creo un oggetto studente e stampo le proprietà
-  var studente = {
+  var studenteSingolo = {
     'nome' : 'simona',
     'cognome' : 'palumbo',
     'eta' : 42
   }
-  for (var k in studente) {
-    console.log(studente[k]);
+  //for (var k in studenteSingolo) {
+    //console.log(studenteSingolo[k]);
+  //}
+//});
+
+// creo array di oggetti studente, ciclo su tutti gli studenti, stampo di
+//ogniuno nome e cognome
+
+var studenti = [
+  {
+    'nome' : 'simona',
+    'cognome' : 'palumbo',
+    'eta' : 42
+  },
+
+  {
+    'nome' : 'maria',
+    'cognome' : 'sabellico',
+    'eta' : 28
+  },
+
+  {
+    'nome' : 'stefano',
+    'cognome' : 'marino',
+    'eta' : 34
+  },
+
+  {
+    'nome' : 'lorenzo',
+    'cognome' : 'famiglietti',
+    'eta' : 30
+  }
+];
+
+for (var i = 0; i < studenti.length; i++) {
+  studenti[i]
+  console.log(studenti[i]);
   }
 });
