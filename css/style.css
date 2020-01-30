@@ -1,0 +1,18 @@
+
+#studenti {
+  background-color: pink;
+}
+
+.lista_nomi {
+  list-style: none;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: white;
+}
+#studente_singolo {
+  font-size: 20px;
+  text-transform: capitalize;
+  padding-left: 36px;
+  color: black;
+  background-color: purple;
+}
